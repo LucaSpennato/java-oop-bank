@@ -41,7 +41,7 @@ public class Conto {
 	}
 	
 	public boolean getMoney(int takenMoney) {
-		if(saldo > 0 || saldo > takenMoney) {			
+		if(saldo > 0 && saldo + 1 > takenMoney) {			
 			saldo = saldo - takenMoney;
 			return true;
 		}
@@ -52,7 +52,7 @@ public class Conto {
 	public String toString() {
 		return "Num conto: " + numeroConto
 				+ "\nName: " + nomeProprietario
-				+ "\nSaldo: " + saldo;
+				+ "\nSaldo: " + saldo + "$";
 	}
 	
 }
