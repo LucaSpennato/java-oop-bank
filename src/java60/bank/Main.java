@@ -6,7 +6,7 @@ public class Main {
 		
 		Conto cn = new Conto("Gianni Fantoni");
 		
-		System.out.println(cn);
+		System.out.println(cn.getNomeProprietario());
 		
 	}
 	
