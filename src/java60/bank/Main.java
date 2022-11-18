@@ -15,7 +15,7 @@ public class Main {
 		
 		System.out.println("---------------------------------------------------------------------");
 		
-		withdrawal = 100;
+		withdrawal = 101;
 		areMoneyTaken = cn.getMoney(withdrawal);
 		
 		cn.setNomeProprietario("Antonello Fantoni");

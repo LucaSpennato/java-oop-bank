@@ -40,9 +40,9 @@ public class Conto {
 		 saldo += addMoney;
 	}
 	
-	public boolean getMoney(int takenMoney) {
-		if(saldo + 1 > takenMoney) {			
-			saldo -= takenMoney;
+	public boolean getMoney(int withdrawal) {
+		if(saldo >= withdrawal) {			
+			saldo -= withdrawal;
 			return true;
 		}
 		return false;
