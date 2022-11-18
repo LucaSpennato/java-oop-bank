@@ -6,7 +6,14 @@ public class Main {
 		
 		Conto cn = new Conto("Gianni Fantoni");
 		
-		System.out.println(cn.getNomeProprietario());
+		cn.addMoney(200);
+		boolean areMoneyTaken = false;
+		areMoneyTaken = cn.getMoney(100);
+		areMoneyTaken = cn.getMoney(100);
+		areMoneyTaken = cn.getMoney(50);
+		
+		System.out.println("Success: " + areMoneyTaken);
+		System.out.println(cn);
 		
 	}
 	

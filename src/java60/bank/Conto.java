@@ -1,5 +1,7 @@
 package java60.bank;
 
+import java.util.Random;
+
 public class Conto {
 
 	private int numeroConto;
@@ -9,15 +11,17 @@ public class Conto {
 	public Conto(String nomeProprietario) {
 		saldo = 0;
 		this.nomeProprietario = nomeProprietario;
-		numeroConto = 0;
+		setNumeroConto();
 	}
 
 	public int getNumeroConto() {
 		return numeroConto;
 	}
 
-	public void setNumeroConto(int numeroConto) {
-		this.numeroConto = numeroConto;
+	private void setNumeroConto() {
+		Random rnd = new Random();
+		
+		this.numeroConto = rnd.nextInt(999999999);
 	}
 
 	public String getNomeProprietario() {
@@ -32,13 +36,20 @@ public class Conto {
 		return saldo;
 	}
 
-	public void setSaldo(int saldo) {
-		this.saldo = saldo;
+	public void addMoney(int addMoney) {
+		 saldo = saldo + addMoney;
+	}
+	
+	public boolean getMoney(int takenMoney) {
+		if(saldo > 0 || saldo > takenMoney) {			
+			saldo = saldo - takenMoney;
+			return true;
+		}
+		return false;
 	}
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "Num conto: " + numeroConto
 				+ "\nName: " + nomeProprietario
 				+ "\nSaldo: " + saldo;
