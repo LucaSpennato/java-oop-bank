@@ -37,12 +37,12 @@ public class Conto {
 	}
 
 	public void addMoney(int addMoney) {
-		 saldo = saldo + addMoney;
+		 saldo += addMoney;
 	}
 	
 	public boolean getMoney(int takenMoney) {
-		if(saldo > 0 && saldo + 1 > takenMoney) {			
-			saldo = saldo - takenMoney;
+		if(saldo + 1 > takenMoney) {			
+			saldo -= takenMoney;
 			return true;
 		}
 		return false;
